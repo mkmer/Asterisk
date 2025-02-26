@@ -14,6 +14,6 @@ RUN sysctl net.ipv6.conf.all.disable_ipv6 && \
     git clone https://github.com/AllStarLink/asl3-asterisk.git && \
     ls -la ./asl3-asterisk
 WORKDIR /workspaces/asl3-asterisk
-RUN ["./build-asl3", "-l", "-d /workspaces", "-a","echo \$AST_VER", "-v", "echo \$RPT_VER", "-r","echo \$REL_VER", "source"]
+RUN ./build-asl3 -l -d /workspaces -a $AST_VER -v $RPT_VER -r $REL_VER source
 
 ENV LANG en_US.utf8
