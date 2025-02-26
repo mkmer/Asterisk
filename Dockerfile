@@ -1,5 +1,5 @@
 
-FROM debian as build
+FROM mcr.microsoft.com/devcontainers/cpp:dev-debian12 as build
 SHELL ["/bin/bash", "-c"]
 ENV REL_VER="1.0.0"
 ENV AST_VER="22.2.0"
